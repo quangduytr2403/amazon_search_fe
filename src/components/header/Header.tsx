@@ -64,7 +64,8 @@ const Header: React.FC<Props> = () => {
                 "pageIndex=0" +
                 "&pageSize=3" +
                 `&searchKey=${debouncedSearchKey}` +
-                `&categories=${currentCategory.id == ALL_CATEGORY_ID ? "" : currentCategory.id}`
+                `&categories=${currentCategory.id == ALL_CATEGORY_ID ? "" : currentCategory.id}`+
+                `&isEs=true`
             const response = await fetch(url)
             const data = await response.json()
             setFilteredProducts(data.data.items)

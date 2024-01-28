@@ -76,6 +76,8 @@ const Search: React.FC<Props> = () => {
                 url += `&max=${filterData.max}`
             }
 
+            url += `&isEs=true`;
+
             url += `&orderBy=${sort.value.field}`
             url += `&orderDirection=${sort.value.order}`
 
